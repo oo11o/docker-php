@@ -41,3 +41,5 @@ Create a folder and enter it
 
 
 #### Open a browser and enter localhost:8080
+
+<img width="1095" alt="image" src="https://github.com/oo11o/docker-php/assets/63920713/e4e00092-10f7-4c73-b28e-07f1320b9943">
