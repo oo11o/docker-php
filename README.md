@@ -18,7 +18,7 @@ contains:
 
 # How to use
 ### Options 1. Clone a specific branch
-Create a folder for and enter it
+Create a folder and enter it
 
 `git clone -b base/php8.2-nginx https://github.com/oo11o/docker-php.git .`<br>
 
