@@ -8,13 +8,13 @@ Thanks to different configurations tailored to specific needs, developers can qu
 ## base/php8.2-nginx
 
 services:
-- `php 8.2`
+- `php: 8.2`
 - `nginx: latest`
 
 contains:
 - `docker` - folder containing configuration files for containers
 - `app` - folder containing index.php The folder consists of a file index.php with one function phpinfo()
-- `docker-copmpose.yml` - папка с JavaScript файлами.
+- `docker-copmpose.yml`
 
 # How to use
 ### Options 1. Clone a specific branch
