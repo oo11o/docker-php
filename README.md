@@ -44,7 +44,7 @@ Create a folder and enter it
 `docker-compose up -d --build`
 
 ## CHECK xdebug
-    `docker-compose run php php -v`
+`docker-compose run php php -v`
     ![image](https://github.com/oo11o/docker-php/assets/63920713/203704f7-84da-4f46-8bff-0cfa6f671139)
 
     if you see <strong>with Xdebug v...., Copyright (c) 2002-2023, by Derick Rethans</strong> xDebug was initialized
