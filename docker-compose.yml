@@ -8,13 +8,16 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./docker/
-      - ./app:/var/www/html
-
+      - ./app:/app
   php:
     container_name: php
     build:
       context: ./docker/
       dockerfile: php.dockerfile
     volumes:
-      - ./app:/var/www/html
+      - ./app:/app
+    environment:
+      PHP_IDE_CONFIG: serverName=Docker
+    # special config for linux
+    env_file:
+      - .env.docker
