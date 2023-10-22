@@ -16,9 +16,10 @@ contains:
 - `docker` - folder containing configuration files for containers
 - `app` - folder containing index.php The folder consists of a file index.php with one function phpinfo()
 - `docker-copmpose.yml`
-- `.env.docker` - special for linux
+- `.env.docker` - special to Linux
 
 # BRANCH ONLY FOR LINUX USER
+# CONFIGURATION WITH PHPSTORM
 
 ## How to download
 ### Options 1. Clone a specific branch
@@ -45,7 +46,9 @@ Create a folder and enter it
 
 ## CHECK xdebug
     docker-compose run php php -v
-    
+    ![image](https://github.com/oo11o/docker-php/assets/63920713/203704f7-84da-4f46-8bff-0cfa6f671139)
+
+    if you see <strong>with Xdebug v...., Copyright (c) 2002-2023, by Derick Rethans</strong> xDebug was initialized
 
 ## How to configuration .env.docker
 <strong>In case Xdebug didn't start, check the DOCKER HOST IP</strong><br>
