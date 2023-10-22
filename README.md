@@ -8,19 +8,23 @@ Thanks to different configurations tailored to specific needs, developers can qu
 ## base/php8.2-nginx
 
 services:
-- `php 8.2`
+- `php: 8.2`
 - `nginx: latest`
+- `xdebug: latest`
 
 contains:
 - `docker` - folder containing configuration files for containers
 - `app` - folder containing index.php The folder consists of a file index.php with one function phpinfo()
-- `docker-copmpose.yml` - папка с JavaScript файлами.
+- `docker-copmpose.yml`
+- `.env.docker` - special for linux
 
-# How to use
+# BRANCH ONLY FOR LINUX USER
+
+## How to download
 ### Options 1. Clone a specific branch
 Create a folder and enter it
 
-`git clone -b base/php8.2-nginx https://github.com/oo11o/docker-php.git .`<br>
+`git clone -b xdebug-linux/php8.2-nginx https://github.com/oo11o/docker-php.git .`<br>
 
 `docker-compose up -d --build`
 
@@ -28,7 +32,7 @@ Create a folder and enter it
 Create a folder and enter it
 
 `git clone https://github.com/oo11o/docker-php.git .`<br>
-`git checkout base/php8.2-nginx`<br>
+`git checkout base/xdebug-linux/php8.2-nginx`<br>
 
 `docker-compose up -d --build`
 
@@ -39,7 +43,20 @@ Create a folder and enter it
 
 `docker-compose up -d --build`
 
+## CHECK xdebug
+    docker-compose run php php -v
+    
 
-#### Open a browser and enter localhost:8080
+## How to configuration .env.docker
+<strong>In case Xdebug didn't start, check the DOCKER HOST IP</strong><br>
 
-<img width="1095" alt="image" src="https://github.com/oo11o/docker-php/assets/63920713/e4e00092-10f7-4c73-b28e-07f1320b9943">
+To enable Xdebug to communicate with an external system inside a Docker container,
+it needs to know the IP address of the Docker host. This IP address is used to establish
+connection between Xdebug inside the container and the debugging client (such as your IDE)
+on the external system.
+
+<strong>To find out the IP of the Docker host, use the following command:</strong></br>
+`$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')`
+#### Default: 172.17.0.1
+After you find out your IP address, open the .env.docker file and paste your IP <br/>
+ex. <strong>DOCKER_HOST_IP=172.17.0.1</strong>
