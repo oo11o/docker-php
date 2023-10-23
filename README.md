@@ -10,7 +10,7 @@ Thanks to different configurations tailored to specific needs, developers can qu
 services:
 - `php: 8.2`
 - `nginx: latest`
-- `xdebug: latest`
+- `xDebug: latest`
 
 contains:
 - `docker` - folder containing configuration files for containers
@@ -50,7 +50,7 @@ Create a folder and enter it
 
  if you see <strong>with Xdebug v...., Copyright (c) 2002-2023, by Derick Rethans</strong> xDebug was initialized
 
-## How to configuration .env.docker
+## How to configure .env.docker
 <strong>In case Xdebug didn't start, check the DOCKER HOST IP</strong><br>
 
 To enable Xdebug to communicate with an external system inside a Docker container,
@@ -63,3 +63,12 @@ on the external system.
 #### Default: 172.17.0.1
 After you find out your IP address, open the .env.docker file and paste your IP <br/>
 ex. <strong>DOCKER_HOST_IP=172.17.0.1</strong>
+
+## PHPSTORM
+![image](https://github.com/oo11o/docker-php/assets/63920713/7b6265f0-63b9-46e3-b477-8cd6b1d7fa0a)
+![image](https://github.com/oo11o/docker-php/assets/63920713/0ee84499-2f01-4671-9cff-a27a4c5d1893)
+![image](https://github.com/oo11o/docker-php/assets/63920713/edcd767a-9ed5-4548-96c8-1428d6a560e0)
+
+
+
+
