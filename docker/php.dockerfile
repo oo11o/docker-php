@@ -1,13 +1,22 @@
-FROM php:8.2-fpm
+#FROM php:7.1-fpm
+#
+#RUN pecl install xdebug && \
+#    docker-php-ext-enable xdebug
+#
+#COPY xdebug/xdebug.ini  /usr/local/etc/php/conf.d/xdebug.ini
+#RUN mkdir -p /app
 
-RUN pecl install xdebug && \
-    docker-php-ext-enable xdebug
+FROM php:7.0-fpm
 
-COPY xdebug/xdebug.ini ${PHP_INI_DIR}/conf.d/docker-php-ext-xdebug.ini
+RUN pecl install xdebug-2.7.2 \
+    && docker-php-ext-enable xdebug \
 
-RUN mkdir -p /app
-RUN chown -R www-data:www-data /app
 
-USER www-data
+COPY xdebug/xdebug.ini  /usr/local/etc/php/conf.d/xdebug.ini
 
-WORKDIR /app
+#RUN mkdir -p /app
+#RUN chown -R www-data:www-data /app
+#
+#USER www-data
+#
+#WORKDIR /app
